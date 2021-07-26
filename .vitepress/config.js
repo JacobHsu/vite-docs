@@ -7,7 +7,7 @@ const pkg = require('../package.json')
  */
 module.exports = {
   title: 'Vite 官方中文文档',
-  base: '/vite-docs/',
+  base: '/vueuse-docs/',
   lang: 'zh-CN',
   description: '下一代前端开发与构建工具',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
@@ -18,13 +18,14 @@ module.exports = {
     editLinks: true,
     editLinkText: '为此页提供修改建议',
 
-    algolia: {
-      apiKey: 'b573aa848fd57fb47d693b531297403c',
-      indexName: 'vitejs',
-      searchParameters: {
-        facetFilters: ['tags:cn']
-      }
-    },
+    // /vueuse-docs/ results FAIL
+    // algolia: {
+    //   apiKey: 'b573aa848fd57fb47d693b531297403c',
+    //   indexName: 'vitejs',
+    //   searchParameters: {
+    //     facetFilters: ['tags:cn']
+    //   }
+    // },
 
     carbonAds: {
       carbon: 'CEBIEK3N',
