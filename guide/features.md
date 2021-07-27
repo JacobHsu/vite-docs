@@ -260,6 +260,25 @@ const modules = {
 - 该 Glob 模式会被当成导入标识符：必须是相对路径（以 `./` 开头）或绝对路径（以 `/` 开头，相对于项目根目录解析）。
 - Glob 匹配是使用 `fast-glob` 来实现的 —— 阅读它的文档来查阅 [支持的 Glob 模式](https://github.com/mrmlnc/fast-glob#pattern-syntax)。
 
+### globEager 导入 {#glob-import}
+
+vue-vben-admin/src/router/[routes/index.ts](https://github.com/anncwb/vue-vben-admin/blob/main/src/router/routes/index.ts) [commit](https://github.com/JacobHsu/vue-vite-admin/commit/54c01966ac57baa24fc17eea38b7870d7b997abc)
+
+```ts
+const modules = import.meta.globEager('./modules/**/*.ts');
+
+Object.keys(modules).forEach((key) => {
+  const mod = modules[key].default || {};
+  const modList = Array.isArray(mod) ? [...mod] : [mod];
+  routeModuleList.push(...modList);
+});
+
+export const asyncRoutes = [...routeModuleList];
+
+// Basic routing without permission
+export const basicRoutes = [RootRoute, ...mainOutRoutes, ...asyncRoutes];
+```
+
 ## WebAssembly {#webassembly}
 
 预编译的 `.wasm` 文件可以直接被导入 —— 默认导出一个函数，返回值为所导出 wasm 实例对象的 Promise：
