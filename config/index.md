@@ -710,6 +710,16 @@ createServer()
   CommonJS 的依赖不应该排除在优化外。如果一个 ESM 依赖拥有一个嵌套的 CommonJS 依赖，它也不应被排除。
   :::
 
+vue-vben-admin/blob/main/[vite.config.ts](https://github.com/anncwb/vue-vben-admin/blob/main/vite.config.ts)
+
+[vue-demi](https://www.npmjs.com/package/vue-demi) [consolidate](https://www.npmjs.com/package/consolidate)
+
+```js
+optimizeDeps: {
+  exclude: ['vue-demi', 'consolidate'],
+},
+```
+
 ### optimizeDeps.include {#optimizedeps-include}
 
 - **类型：** `string[]`
