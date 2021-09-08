@@ -716,6 +716,26 @@ createServer()
 
   默认情况下，不在 `node_modules` 中的，链接的包不会被预构建。使用此选项可强制预构建链接的包。
 
+`antd`中需要使用`moment`。而`moment`配置和vite.config.ts有关
+
+vue-vben-admin/blob/main/[vite.config.ts](https://github.com/anncwb/vue-vben-admin/blob/main/vite.config.ts)
+
+  ```js
+    return {
+    // ...
+    optimizeDeps: {
+      // @iconify/iconify: The dependency is dynamically and virtually loaded by @purge-icons/generated, so it needs to be specified explicitly
+      include: [
+        '@iconify/iconify',
+        'ant-design-vue/es/locale/zh_CN',
+        'moment/dist/locale/zh-cn',
+        'ant-design-vue/es/locale/en_US',
+        'moment/dist/locale/eu',
+      ],
+      // ...
+    },
+  ```
+
 ### optimizeDeps.keepNames {#optimizedeps-keepnames}
 
 - **类型：** `boolean`
