@@ -40,8 +40,8 @@ module.exports = {
         text: '相关链接',
         items: [
           {
-            text: 'Twitter',
-            link: 'https://twitter.com/vite_js'
+            text: 'Awesome Vite.js',
+            link: 'https://github.com/vitejs/awesome-vite'
           },
           {
             text: 'Discord Chat',
