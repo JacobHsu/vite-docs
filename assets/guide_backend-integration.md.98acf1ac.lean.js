@@ -1,1 +1,0 @@
-import{o as n,c as s,a}from"./app.a2203fca.js";const t='{"title":"后端集成","description":"","frontmatter":{"title":"后端集成"},"headers":[],"relativePath":"guide/backend-integration.md","lastUpdated":1631083038820}',p={},o=a('',4);p.render=function(a,t,p,e,c,l){return n(),s("div",null,[o])};export default p;export{t as __pageData};
